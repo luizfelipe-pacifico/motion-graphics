@@ -3,7 +3,7 @@ name: motion-graphics
 description: Cria vídeos de motion graphics (MP4 com trilha sintetizada) a partir de uma ideia curta, na marca de quem pede, desenhando tudo em código. Use quando pedirem motion, vídeo animado, vinheta, abertura de evento, lançamento, peça para redes sociais ou animação explicativa, com ou sem vídeo de referência. Para filme de produto digital com telas de interface em 3D, prefira a skill motion-product.
 ---
 
-# Motion graphics (v1.1)
+# Motion graphics (v1.1.1)
 
 Da ideia ao MP4 sem fotos, vídeos ou prints. Cada elemento é **reconstruído em código** (canvas 2D), na paleta e na tipografia da marca, e o filme é uma função pura do tempo. As regras vêm de testes comparados; o porquê de cada uma está em `referencias/licoes.md`.
 

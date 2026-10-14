@@ -1,5 +1,8 @@
 # Histórico
 
+## v1.1.1 (14/10/2026)
+- Instalação em um comando: `npx github:luizfelipe-pacifico/motion-graphics` (com `--projeto` para instalar só no projeto atual; rodar de novo atualiza).
+
 ## v1.1 (14/10/2026)
 Aprendizados de mais de dez filmes completos levados para a skill geral, sem nada específico de produto.
 

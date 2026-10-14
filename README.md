@@ -5,16 +5,16 @@ Skill para Claude Code que cria **vídeos de motion graphics** em MP4 a partir d
 Para filmes de **produto digital** (SaaS, app, sistema) com as telas de interface reconstruídas e animadas em 3D, veja a skill irmã [motion-product](https://github.com/luizfelipe-pacifico/motion-product).
 
 ## Instalação
-Clone esta pasta para a pasta de skills do Claude Code:
-
 ```bash
-# para todos os projetos
-git clone https://github.com/luizfelipe-pacifico/motion-graphics.git ~/.claude/skills/motion-graphics
-# ou só para um projeto
-git clone https://github.com/luizfelipe-pacifico/motion-graphics.git <projeto>/.claude/skills/motion-graphics
+npx github:luizfelipe-pacifico/motion-graphics
 ```
+Pronto: a skill fica disponível no Claude Code em todos os projetos. Abra (ou reinicie) o Claude Code e peça o vídeo.
 
-Requisitos: Node 22 ou mais novo, Chrome ou Edge, e ffmpeg com libx264 (`node render.mjs --check` encontra e guarda em cache).
+- **Só em um projeto:** rode na pasta do projeto `npx github:luizfelipe-pacifico/motion-graphics --projeto`
+- **Atualizar:** rode o mesmo comando de novo.
+- **Remover:** apague a pasta `~/.claude/skills/motion-graphics` (ou `.claude/skills/motion-graphics` no projeto).
+
+Precisa de Node 22 ou mais novo, Chrome ou Edge e ffmpeg com libx264. A skill confere tudo sozinha antes do primeiro vídeo.
 
 ## Uso
 Peça ao Claude Code um vídeo ("faça uma vinheta de 8 s para a nossa marca", "um motion de abertura para o evento"). A skill pergunta só o que faltar: o que é a peça e para quem, o que quem assiste precisa sentir, se é demonstrativa ou publicitária, formato e duração, e o design system ou a identidade visual. Depois monta o roteiro, desenha as cenas, revisa com folhas de contato e checagens automáticas, e renderiza uma vez.
@@ -22,6 +22,7 @@ Peça ao Claude Code um vídeo ("faça uma vinheta de 8 s para a nossa marca", "
 ## Estrutura
 ```
 SKILL.md                  instruções que o Claude segue
+bin/instalar.mjs          instalador usado pelo npx (package.json aponta para ele)
 modelos/
   film.html               palco em canvas: contrato seek(t), utilitários, carga de fontes e logotipo
   pecas.js                peças prontas: textos, traço de virada, número que embaralha, selo, lista, anel,
